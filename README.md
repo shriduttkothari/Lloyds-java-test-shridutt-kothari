@@ -1,7 +1,7 @@
 # Lloyds-java-test-shridutt-kothari
 Java Developer Technical Test For LLOYDS
 
-##Project Description
+## Project Description
 
 This is a Multi-Maven module Project it uses SpringBoot Framework version 2.3.6.RELEASE.
 The Project uses Spring Web to serve the data as a REST API
@@ -95,14 +95,17 @@ To start the REST API, we can run below command inside lloyds-booking-rest-api/t
 	
 ## Running the REST API To Visualize the data in browser:
 
-Below URls can be called with a client e.g. cURL, postman once the app is up and running (to run the app see Running the project section):
+Below URls can be called with a client e.g. CURL or POSTMAN once the app is up and running (to run the app see Running the project section):
+
+### Endpoint:
 
 	HTTP POST: http://localhost:8081/bookings
-	Headers: 
-		Content-Type: application/json
-		Accept: application/json
-	
-	Example Request Body:
+### Headers: 
+
+	Content-Type: application/json
+	Accept: application/json
+### Example Request Body:
+
 	{
 	  "companyOfficeHoursStart": "0900",
 	  "companyOfficeHoursEnd": "1730",
@@ -139,7 +142,8 @@ Below URls can be called with a client e.g. cURL, postman once the app is up and
 		}
 	  ]
 	}
-	Example Response Body:
+### Example Response Body:
+
 	[
 		{
 			"meetingDate": "2016-07-21",
@@ -172,7 +176,11 @@ Below URls can be called with a client e.g. cURL, postman once the app is up and
 ## Screenshots:
 
 Screenshots of API output and postman tests are available under screenshots directory of this repository
-	
+
+![Postman API Execution](screenshots/postman_api_invocation.PNG)
+
+![Postman Test Results](screenshots/postman_test_cases.PNG)
+
 ## Desclaimer:
 
 - Completed Project is implemented solely by:
@@ -191,5 +199,5 @@ Screenshots of API output and postman tests are available under screenshots dire
 	Only 1 REST end-points is exposed
 	Only Basic validation on Data is perforemd before loading processing the request
 	
-## ----------------------------------------------------------------------------------------------------------------------------------------
+## ----------------------------------------------------------------------------------
 
