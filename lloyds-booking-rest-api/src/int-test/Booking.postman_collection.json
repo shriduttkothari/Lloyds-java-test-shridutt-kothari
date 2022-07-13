@@ -1,0 +1,80 @@
+{
+	"info": {
+		"_postman_id": "224b978e-46ca-459a-b213-7b9b2379652a",
+		"name": "Booking",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create Bookings",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"\r",
+							"pm.test(\"Status code is 201\", () => {\r",
+							"  pm.response.to.have.status(201);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"response is valid\", () => {\r",
+							"  const responseJson = pm.response.json();\r",
+							"  \r",
+							"  pm.expect(responseJson[0].meetingDate).to.eql(\"2016-07-21\");\r",
+							"  pm.expect(responseJson[0].meetings[0].meetingStartHours).to.eql(\"09:00\");\r",
+							"  pm.expect(responseJson[0].meetings[0].meetingEndHours).to.eql(\"11:00\");\r",
+							"  pm.expect(responseJson[0].meetings[0].employeeId).to.eql(\"EMP001\");\r",
+							"\r",
+							"  pm.expect(responseJson[1].meetingDate).to.eql(\"2016-07-22\");\r",
+							"\r",
+							"  pm.expect(responseJson[1].meetings[0].meetingStartHours).to.eql(\"14:00\");\r",
+							"  pm.expect(responseJson[1].meetings[0].meetingEndHours).to.eql(\"16:00\");\r",
+							"  pm.expect(responseJson[1].meetings[0].employeeId).to.eql(\"EMP003\");\r",
+							"\r",
+							"  pm.expect(responseJson[1].meetings[1].meetingStartHours).to.eql(\"16:00\");\r",
+							"  pm.expect(responseJson[1].meetings[1].meetingEndHours).to.eql(\"17:00\");\r",
+							"  pm.expect(responseJson[1].meetings[1].employeeId).to.eql(\"EMP004\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"companyOfficeHoursStart\": \"0900\",\r\n  \"companyOfficeHoursEnd\": \"1730\",\r\n  \"bookingRequests\": [\r\n    {\r\n      \"requestSubmissionTime\": \"2016-07-18 10:17:06\",\r\n      \"employeeId\": \"EMP001\",\r\n      \"meetingStartTime\": \"2016-07-21 09:00\",\r\n      \"meetingDurationInHours\": 2\r\n    },\r\n    {\r\n      \"requestSubmissionTime\": \"2016-07-18 12:34:56\",\r\n      \"employeeId\": \"EMP002\",\r\n      \"meetingStartTime\": \"2016-07-21 09:00\",\r\n      \"meetingDurationInHours\": 2\r\n    },\r\n    {\r\n      \"requestSubmissionTime\": \"2016-07-18 09:28:23\",\r\n      \"employeeId\": \"EMP003\",\r\n      \"meetingStartTime\": \"2016-07-22 14:00\",\r\n      \"meetingDurationInHours\": 2\r\n    },\r\n    {\r\n      \"requestSubmissionTime\": \"2016-07-18 11:23:45\",\r\n      \"employeeId\": \"EMP004\",\r\n      \"meetingStartTime\": \"2016-07-22 16:00\",\r\n      \"meetingDurationInHours\": 1\r\n    },\r\n    {\r\n      \"requestSubmissionTime\": \"2016-07-15 17:29:12\",\r\n      \"employeeId\": \"EMP005\",\r\n      \"meetingStartTime\": \"2016-07-21 16:00\",\r\n      \"meetingDurationInHours\": 3\r\n    }\r\n  ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/bookings",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"bookings"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

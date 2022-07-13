@@ -1,0 +1,27 @@
+[
+  {
+    "meetingDate": "2011-03-21",
+    "meetings": [
+      {
+        "meetingStartHours": "09:00",
+        "meetingEndHours": "11:00",
+        "employeeId": "EMP001"
+      }
+    ]
+  },
+  {
+    "meetingDate": "2011-03-21",
+    "meetings": [
+      {
+        "meetingStartHours": "14:00",
+        "meetingEndHours": "16:00",
+        "employeeId": "EMP003"
+      },
+      {
+        "meetingStartHours": "16:00",
+        "meetingEndHours": "17:00",
+        "employeeId": "EMP004"
+      }
+    ]
+  }
+]

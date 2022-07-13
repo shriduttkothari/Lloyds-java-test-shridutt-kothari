@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://maven.apache.org/POM/4.0.0"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>lloyds.booking</groupId>
+		<artifactId>lloyds-booking-parent</artifactId>
+		<version>1.0</version>
+		<relativePath>../pom.xml</relativePath> <!-- lookup parent from repository -->
+	</parent>
+
+	<packaging>jar</packaging>
+	<artifactId>lloyds-booking-dao</artifactId>
+	<name>LLOYDS Booking DAO</name>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+
+	<developers>
+		<developer>
+			<name>Shridutt Kothari</name>
+			<id>shriduttkothari@gmail.com</id>
+			<email>shriduttkothari@gmail.com</email>
+			<organization></organization>
+			<roles>
+				<role>Senior Backend Java Developer</role>
+			</roles>
+		</developer>
+	</developers>
+</project>

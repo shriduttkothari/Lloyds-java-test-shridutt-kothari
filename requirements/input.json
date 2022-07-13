@@ -1,0 +1,35 @@
+{
+  "companyOfficeHoursStart": "1730",
+  "bookingRequest": [
+    {
+      "requestSubmissionTime": "2016-07-18 10:17:06",
+      "employeeId": "EMP001",
+      "meetingStartTime": "2016-07-21 09:00",
+      "meetingDurationInHours": 2
+    },
+    {
+      "requestSubmissionTime": "2016-07-18 12:34:56",
+      "employeeId": "EMP002",
+      "meetingStartTime": "2016-07-21 09:00",
+      "meetingDurationInHours": 2
+    },
+    {
+      "requestSubmissionTime": "2016-07-18 09:28:23",
+      "employeeId": "EMP003",
+      "meetingStartTime": "2016-07-22 14:00",
+      "meetingDurationInHours": 2
+    },
+    {
+      "requestSubmissionTime": "2016-07-18 11:23:45",
+      "employeeId": "EMP004",
+      "meetingStartTime": "2016-07-22 16:00",
+      "meetingDurationInHours": 1
+    },
+    {
+      "requestSubmissionTime": "2016-07-15 17:29:12",
+      "employeeId": "EMP005",
+      "meetingStartTime": "2016-07-21 16:00",
+      "meetingDurationInHours": 3
+    }
+  ]
+}
